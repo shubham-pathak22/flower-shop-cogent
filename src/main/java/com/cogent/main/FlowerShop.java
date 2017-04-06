@@ -44,11 +44,12 @@ public class FlowerShop
     for (Flower f : list) {
       s.append(f.getReciept()).append("\n");
     }
-    s.setLength(s.length()-1);
+    s.setLength(s.length() - 1);
     return s.toString();
   }
-  
-  public static void clearBucket(){
+
+  public static void clearBucket()
+  {
     FlowerShop.list.clear();
   }
 
