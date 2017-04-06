@@ -32,12 +32,12 @@ public class FlowerCatalogue
 
   private static Map<FlowerType, List<String>> priceMap = new HashMap<FlowerType, List<String>>();
 
-  public void initialize()
+  public void initialize(String cataoguePath)
   {
     String result = "";
     ClassLoader classLoader = FlowerCatalogue.class.getClassLoader();
     try {
-      result = IOUtils.toString(classLoader.getResourceAsStream("Catalogue"));
+      result = IOUtils.toString(classLoader.getResourceAsStream(cataoguePath));
       String[] flowers = result.split("\n");
       for (String f : flowers) {
         String[] flower = f.split("\\|");

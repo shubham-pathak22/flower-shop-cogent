@@ -43,7 +43,8 @@ A successfully passing test(s) that demonstrates the following output: (The form
 2 x 5 $9.95<br>
 1 x 3 $5.95
 
-## Sample Run
+## Sample Run 
+##### Main Class : FlowerShop.java
 
 Please enter valid Flower Code along with quantity<br>
 Valid Flower Codes : R12, L09, T58<br>

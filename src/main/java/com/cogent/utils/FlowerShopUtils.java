@@ -2,6 +2,7 @@ package com.cogent.utils;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import com.cogent.model.Bundle;
@@ -33,7 +34,7 @@ public class FlowerShopUtils
     while (totalBundles != 0) {
       Iterator<Bundle> iter = ImmutableSet
           .copyOf(Iterables.skip(flower.getBundle(), flower.getBundle().size() - totalBundles)).iterator();
-      sizeCount = new HashMap<Bundle, Integer>();
+      sizeCount = new LinkedHashMap<Bundle, Integer>();
       remainder = flower.getOrder().getQuantity();
       while (iter.hasNext()) {
         Bundle b = iter.next();

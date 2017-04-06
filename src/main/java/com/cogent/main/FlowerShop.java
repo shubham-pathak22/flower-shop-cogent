@@ -44,13 +44,18 @@ public class FlowerShop
     for (Flower f : list) {
       s.append(f.getReciept()).append("\n");
     }
+    s.setLength(s.length()-1);
     return s.toString();
+  }
+  
+  public static void clearBucket(){
+    FlowerShop.list.clear();
   }
 
   public static void main(String[] args)
   {
     FlowerCatalogue f = FlowerCatalogue.getInstance();
-    f.initialize();
+    f.initialize("file/Catalogue");
 
     Scanner in;
     in = new Scanner(System.in);
