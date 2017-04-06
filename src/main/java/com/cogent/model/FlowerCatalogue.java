@@ -10,6 +10,10 @@ import org.apache.commons.io.IOUtils;
 
 import com.cogent.main.FlowerType;
 
+/**
+ * Singleton representing Flower Catalogue.
+ *
+ */
 public class FlowerCatalogue
 {
   private static FlowerCatalogue flowerCatalogue;
@@ -53,5 +57,5 @@ public class FlowerCatalogue
   {
     return priceMap.get(type);
   }
- 
+
 }

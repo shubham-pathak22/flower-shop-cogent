@@ -2,13 +2,17 @@ package com.cogent.model;
 
 import java.util.Collection;
 
+/**
+ * Abstract class representing a Flower
+ *
+ */
 public abstract class Flower
 {
 
   private String code;
   private Order order;
 
-  public Flower(String code,Order order)
+  public Flower(String code, Order order)
   {
     super();
     this.code = code;
@@ -19,7 +23,7 @@ public abstract class Flower
   {
     return code;
   }
-  
+
   public Order getOrder()
   {
     return order;

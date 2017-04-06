@@ -42,3 +42,26 @@ A successfully passing test(s) that demonstrates the following output: (The form
 13 T58 $25.85<br>
 2 x 5 $9.95<br>
 1 x 3 $5.95
+
+## Sample Run
+
+Please enter valid Flower Code along with quantity<br>
+Valid Flower Codes : R12, L09, T58<br>
+E.g. 10 R12<p>
+10 R12<br>
+Enter BUY to checkout or add to the order<br>
+15 L09<br>
+Enter BUY to checkout or add to the order<br>
+13 T58<br>
+Enter BUY to checkout or add to the order<br>
+BUY<p>
+10 R12 $12.99<br>
+1 X 10 $12.99<p>
+
+15 L09 $41.9<br>
+1 X 9 $24.95<br>
+1 X 6 $16.95<p>
+
+13 T58 $25.85<br>
+1 X 3 $5.95<br>
+2 X 5 $9.95

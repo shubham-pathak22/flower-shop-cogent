@@ -6,15 +6,25 @@ import java.util.Map;
 
 import com.cogent.model.Bundle;
 import com.cogent.model.Flower;
-import com.cogent.model.Order;
 import com.cogent.model.Reciept;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterables;
 
+/**
+ * Utility classes for Flower Shop
+ *
+ */
 public class FlowerShopUtils
 {
 
-  public static Reciept calculateBill(Flower flower, Order order)
+  /**
+   * Calulates the cost of the flower and returns a Reciept
+   * 
+   * @param flower
+   *          Flower
+   * @return Reciept
+   */
+  public static Reciept calculateBill(Flower flower)
   {
     int count, remainder = 0;
     Map<Bundle, Integer> sizeCount = null;
@@ -24,7 +34,7 @@ public class FlowerShopUtils
       Iterator<Bundle> iter = ImmutableSet
           .copyOf(Iterables.skip(flower.getBundle(), flower.getBundle().size() - totalBundles)).iterator();
       sizeCount = new HashMap<Bundle, Integer>();
-      remainder = order.getQuantity();
+      remainder = flower.getOrder().getQuantity();
       while (iter.hasNext()) {
         Bundle b = iter.next();
         if (remainder < b.getSize()) {
@@ -45,9 +55,9 @@ public class FlowerShopUtils
       }
     }
     if (remainder != 0) {
-      return new Reciept("NOT A VALID ORDER");
+      return new Reciept("NOT A VALID ORDER FOR FLOWER CODE " + flower.getCode());
     } else {
-      return new Reciept(generateReciept(sizeCount, flower.getCode(), order.getQuantity()));
+      return new Reciept(generateReciept(sizeCount, flower.getCode(), flower.getOrder().getQuantity()));
     }
   }
 

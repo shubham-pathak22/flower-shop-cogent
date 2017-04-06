@@ -1,5 +1,9 @@
 package com.cogent.model;
 
+/**
+ * 
+ * Class representing a given Order
+ */
 public class Order
 {
 

@@ -37,7 +37,7 @@ public class Rose extends Flower
   @Override
   public Reciept getReciept()
   {
-    return FlowerShopUtils.calculateBill(this, getOrder());
+    return FlowerShopUtils.calculateBill(this);
   }
 
   @Override
